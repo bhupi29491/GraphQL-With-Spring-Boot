@@ -1,6 +1,7 @@
 package com.bhupi.demo.query;
 
 
+import com.bhupi.demo.request.SampleRequest;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.Arguments;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -22,5 +23,11 @@ public class Query  {
     @QueryMapping
     public String fullName(@Argument String firstName, @Argument String lastName) {
         return firstName + " " + lastName;
+    }
+
+
+    @QueryMapping
+    public String fullNameWithJson(@Argument SampleRequest sampleRequest) {
+        return sampleRequest.getFirstName() + " " + sampleRequest.getLastName();
     }
 }
