@@ -40,7 +40,8 @@ public class Query {
         return sampleRequest.getFirstName() + " " + sampleRequest.getLastName();
     }
 
-    public StudentResponse getStudent(Long id) {
+    @QueryMapping
+    public StudentResponse student(@Argument Integer id) {
         return new StudentResponse(studentService.getStudentById(id));
     }
 }

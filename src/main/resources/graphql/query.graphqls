@@ -3,7 +3,7 @@ type Query {
     secondQuery : String
     fullName(firstName : String, lastName : String) : String
     fullNameWithJson(sampleRequest : SampleRequest) : String
-    student(id : Long) : StudentResponse
+    student(id : Int) : StudentResponse
 }
 
 input SampleRequest {
@@ -13,7 +13,7 @@ input SampleRequest {
 
 
 type StudentResponse {
-        id : Long
+        id : Int
         firstName : String
         lastName : String
         email : String

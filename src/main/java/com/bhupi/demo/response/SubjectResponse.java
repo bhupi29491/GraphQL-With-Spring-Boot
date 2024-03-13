@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class SubjectResponse {
 
-    private Long id;
+    private Integer id;
 
     private String subjectName;
 

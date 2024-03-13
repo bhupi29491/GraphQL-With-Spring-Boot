@@ -16,7 +16,7 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    public Student getStudentById(long id) {
+    public Student getStudentById(Integer id) {
         return studentRepository.findById(id).get();
     }
 }

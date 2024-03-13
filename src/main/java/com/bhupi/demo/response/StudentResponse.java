@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 public class StudentResponse {
 
-    private Long id;
+    private Integer id;
 
     private String firstName;
 
